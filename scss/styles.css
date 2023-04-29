@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Roboto";
+}
+
+body {
+  display: flex;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.text--bold {
+  font-weight: bold;
+}
+
+.text--grey {
+  color: grey;
+}
+
+.side-nav {
+  position: fixed;
+  bottom: 0;
+  height: 4rem;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+}
+@media (min-width: 500px) {
+  .side-nav {
+    height: 100vh;
+    width: 20vw;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1280px) {
+  .side-nav {
+    width: 25vw;
+  }
+}
+.side-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  line-height: 4rem;
+}
+@media (min-width: 500px) {
+  .side-nav__list {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1280px) {
+  .side-nav__list {
+    align-items: flex-start;
+    padding-left: 2rem;
+  }
+}
+.side-nav__label {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .side-nav__label {
+    display: inline-block;
+  }
+}
+
+.side-nav__icon {
+  vertical-align: middle;
+}
+
+.icon--logo {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url("../assets/icons/twitter.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  display: none;
+}
+@media (min-width: 500px) {
+  .icon--logo {
+    display: inline-block;
+  }
+}
+
+.icon--home {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url("../assets/icons/home.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+
+.icon--search {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url("../assets/icons/magnifying-glass.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+@media (min-width: 1280px) {
+  .icon--search {
+    display: none;
+  }
+}
+
+.icon--explore {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url("../assets/icons/explore.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  display: none;
+}
+@media (min-width: 1280px) {
+  .icon--explore {
+    display: inline-block;
+  }
+}
+
+.icon--notifications {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url("../assets/icons/notifications.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+
+.icon--messages {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url("../assets/icons/messages.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+
+.icon--bookmarks {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url("../assets/icons/bookmarks.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  display: none;
+}
+@media (min-width: 500px) {
+  .icon--bookmarks {
+    display: inline-block;
+  }
+}
+
+.icon--lists {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url("../assets/icons/lists.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  display: none;
+}
+@media (min-width: 500px) {
+  .icon--lists {
+    display: inline-block;
+  }
+}
+
+.icon--profile {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url("../assets/icons/profile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  display: none;
+}
+@media (min-width: 500px) {
+  .icon--profile {
+    display: inline-block;
+  }
+}
+
+.icon--more {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url("../assets/icons/more.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  display: none;
+}
+@media (min-width: 500px) {
+  .icon--more {
+    display: inline-block;
+  }
+}
+
+.icon--tweet {
+  height: 1.7rem;
+  width: 1.7rem;
+  background-image: url("../assets/icons/plus-sign.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  position: absolute;
+  bottom: 5rem;
+  right: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+@media (min-width: 500px) {
+  .icon--tweet {
+    position: static;
+  }
+}
+
+@media (min-width: 500px) {
+  .side-nav {
+    justify-content: space-between;
+  }
+}
+.side-nav__text {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .side-nav__text {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+}
+.side-nav__user-info {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.side-nav__user-info:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+.side-nav__user-info--left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.side-nav__user-info--right {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .side-nav__user-info--right {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 500px) {
+  .side-nav__avatar {
+    height: 2.75rem;
+    width: 2.75rem;
+    background-image: url("../assets/images/wooden-shoes-logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 500px) {
+  .main {
+    border-left: 1px solid lightgrey;
+  }
+}
+@media (min-width: 768px) {
+  .main {
+    width: 70vw;
+  }
+}
+
+.header {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+}
+.header__arrow-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("../assets/icons/left-arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* border: 1px solid green; */
+  border-radius: 50%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.header__arrow-icon:hover {
+  background-color: lightgrey;
+}
+.header--right {
+  /* border: 1px solid blue; */
+}
+
+.hero {
+  margin-top: 4rem;
+}
+.hero__background {
+  height: 25vh;
+  background-image: url("../assets/images/wooden-shoes-hero.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* border: 1px solid pink; */
+}
+.hero--bottom {
+  /* border: 1px solid palegoldenrod; */
+  margin-top: -5rem;
+  height: 9rem;
+  display: flex;
+  justify-content: space-between;
+}
+.hero__avatar {
+  height: 9rem;
+  width: 9rem;
+  background-image: url("../assets/images/wooden-shoes-logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 4px solid white;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+.hero__avatar:hover {
+  filter: brightness(85%);
+}
+.hero__button {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  margin-top: 6rem;
+  padding: 1rem;
+}
+.hero__button:hover {
+  background-color: lightgrey;
+}
+
+.account-details {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+.account-details__name {
+  /* border: 1px solid skyblue; */
+  margin-bottom: 1rem;
+}
+.account-details__calendar {
+  /* border: 1px solid brown; */
+  margin-bottom: 1rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.calendar-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("../assets/icons/calendar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 0.5rem;
+}
+
+.account-details__follow {
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+.follow-text {
+  margin-right: 0.5rem;
+}
+
+.profile-nav {
+  text-align: center;
+  width: auto;
+  overflow: hidden;
+}
+
+.profile-nav__list {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid lightgrey;
+}
+
+.profile-nav__list-item {
+  padding-bottom: 1rem;
+}
+
+.profile-nav__list-item:hover {
+  color: black;
+  cursor: pointer;
+  border-bottom: 4px solid #1da1f2;
+}
+
+.flat-icon {
+  display: none;
+}
+
+.tweet {
+  border: 1px solid grey;
+  width: 700px;
+  height: 75px;
+  display: flex;
+}
+.tweet__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url("../assets/images/wooden-shoes-logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tweet__text {
+  width: 80%;
+  height: 2.5rem;
+}
+.tweet__name {
+  font-weight: 700;
+}/*# sourceMappingURL=styles.css.map */

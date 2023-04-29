@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/styles.css" />
+    <title>Tweetr</title>
+  </head>
+  <body>
+    <!-- The side nav -->
+    <nav class="side-nav">
+      <ul class="side-nav__list">
+        <li class="side-nav__list-item text--grey">
+          <div class="side-nav__icon icon--logo"></div>
+        </li>
+        <li class="side-nav__list-item text--grey">
+          <div class="side-nav__icon icon--home"></div>
+          <a href="#" class="side-nav__label"> Home</a>
+        </li>
+        <li class="side-nav__list-item text--grey">
+          <div class="side-nav__icon icon--search"></div>
+        </li>
+        <li class="side-nav__list-item text--grey">
+          <div class="side-nav__icon icon--explore"></div>
+          <a href="#" class="side-nav__label">Explore</a>
+        </li>
+        <li class="side-nav__list-item text--grey">
+          <div class="side-nav__icon icon--notifications"></div>
+          <a href="#" class="side-nav__label">Notifications</a>
+        </li>
+        <li class="side-nav__list-item text--grey">
+          <div class="side-nav__icon icon--messages"></div>
+          <a class="side-nav__label" href="#">Messages</a>
+        </li>
+        <li class="side-nav__list-item text--grey">
+          <div class="side-nav__icon icon--bookmarks"></div>
+          <a href="#" class="side-nav__label">Bookmarks</a>
+        </li>
+        <li class="side-nav__list-item text--grey">
+          <div class="side-nav__icon icon--lists"></div>
+          <a href="#" class="side-nav__label">Lists</a>
+        </li>
+        <li class="side-nav__list-item text--grey">
+          <div class="side-nav__icon icon--profile"></div>
+          <a href="#" class="side-nav__label">Profile</a>
+        </li>
+        <li class="text--bold side-nav__list-item">
+          <div class="side-nav__icon icon--tweet"></div>
+        </li>
+      </ul>
+      <section class="side-nav__user-info">
+        <div class="side-nav__user-info--left">
+          <figure class="side-nav__avatar"></figure>
+          <figcaption class="side-nav__text">
+            <p class="text--bold user-name">Teutopolis Wooden Shoes</p>
+            <p class="user-handle">@woodenshoelife</p>
+          </figcaption>
+        </div>
+        <div class="side-nav__user-info--right"></div>
+      </section>
+    </nav>
+
+    <!-- The middle -->
+    <main class="main">
+      <!-- The section above the hero image -->
+      <header class="header">
+        <figure class="header__arrow-icon"></figure>
+        <div class="header--right">
+          <h3 class="user-name" id="user-header">Teutopolis Wooden Shoes</h3>
+          <p class="text--grey">3 Tweets</p>
+        </div>
+      </header>
+
+      <!-- The section with the hero image, the avatar, and the edit profile button  -->
+      <section class="hero">
+        <figure class="hero__background"></figure>
+        <div class="hero--bottom">
+          <figure class="hero__avatar"></figure>
+          <span class="hero__button">
+            <a class="text--bold" href="#">Edit profile</a>
+          </span>
+        </div>
+      </section>
+
+      <!-- The section with the text elements underneath the avatar -->
+      <section class="account-details">
+        <!-- Container for the user name and user handle  -->
+        <div class="account-details__name">
+          <h3 class="user-name">Teutopolis Wooden Shoes</h3>
+          <p class="text--grey user-handle">@woodenshoelife</p>
+        </div>
+
+        <!-- Container for the calendar and joined elements -->
+        <div class="account-details__calendar">
+          <figure class="calendar-icon"></figure>
+          <p class="text--grey calendar-icon__text">Joined January 2013</p>
+        </div>
+
+        <!-- Container for following and followers elements -->
+        <div class="account-details__follow">
+          <p class="follow-text">
+            <span class="text--bold following">17 </span
+            ><span class="text--grey">Following</span>
+          </p>
+          <p class="follow-text">
+            <span class="text--bold followers">25 </span
+            ><span class="text--grey">Followers</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Nav bar  -->
+      <nav class="profile-nav">
+        <ul class="profile-nav__list">
+          <li class="text--bold profile-nav__list-item">Tweets</li>
+          <li class="text--bold profile-nav__list-item">Tweets & replies</li>
+          <li class="text--bold profile-nav__list-item">Media</li>
+          <li class="text--bold profile-nav__list-item">Likes</li>
+        </ul>
+      </nav>
+
+      <!-- Tweets will go here, but we will add them using JS!  -->
+      <section class="tweets" id="tweets"></section>
+
+      <!-- Attribution for freepik and flaticon -->
+      <aside class="flat-icon">
+        Icons made by
+        <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
+      </aside>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
